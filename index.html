@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body style=" background-image: url( https://png.pngtree.com/background/20210716/original/pngtree-school-education-learning-classroom-teaching-chalk-blackboard-math-background-picture-image_1340510.jpg );  ">
+
+
+        
+        </html></em></h1>
+        <div class="main">
+            <form>
+                <input type="text" name="" id="result">
+            </form>
+            <div class="buttonbtn">
+            
+            <div>
+                <button onclick="getnumber('7')"> 7</button>
+                <button onclick="getnumber('8')"> 8</button>
+                <button onclick="getnumber('9')"> 9</button>
+                <button onclick="getnumber('*')" class="btn"> x</button>
+            </div>
+            <div>
+                <button onclick="getnumber('4')"> 4</button>
+                <button onclick="getnumber('5')"> 5</button>
+                <button onclick="getnumber('6')"> 6</button>
+                <button onclick="getnumber('-')" class="btn"> -</button>
+            </div>
+            <div>
+                <button onclick="getnumber('1')">  1 </button>
+                <button onclick="getnumber('2')">  2 </button>
+                <button onclick="getnumber('3')">  3 </button>
+                <button  onclick="getnumber('+')"class="btn">  + </button>
+            </div>
+            
+            <div>
+                <button onclick="getnumber('0')"> 0</button>
+                <button onclick="getnumber('.')"> .</button>
+                <button onclick="clearbtn()" class="clear">C</button>
+                <button onclick="getnumber('/')" class="btn">/</button>
+            </div>
+            <div>
+
+                
+                <button onclick="del()" class="del">DEL</button>
+                <button  class="equalto" onclick="result()">=</button>
+            </div>
+
+
+            </div>
+        </div>
+
+        <!-- css -->
+        <style>
+            body{
+    height: 100vh;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main{
+    border: 1.5px solid  black;
+    width: 300px;
+    margin: 0 auto;
+    height: 530px;
+    box-shadow: 4px 4px 30px rgb(0, 0 , 0 , 0.3);
+    border-radius: 12px;
+    overflow: hidden;
+}
+form input{
+    width: 94%;
+    height: 150px;
+    border: none;
+    border-radius: 12px;
+    font-size: 2rem ;
+    padding: 1rem;
+    color: white;
+    background-color: black;
+    text-align: right;
+    pointer-events: none;
+}
+button{
+    width: 60px;
+    height: 52px;
+    font-size: 22px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    flex: 0 0 22%;
+    margin: 5px 0 ;
+}
+.buttonbtn{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    background-color:lightcyan;
+}
+.clear{
+    background-color: red;
+}
+.equalto{
+    background-color: greenyellow;
+}
+.btn{
+    background-color:orange;
+}
+.del{
+    background-color: deepskyblue;
+}
+        </style>
+        <!-- javascript -->
+        <script src="page.js">
+            
+            function getnumber(num){
+    var result = document.getElementById("result");
+    result.value += num;
+}
+function clearbtn(){
+    var result = document.getElementById("result");
+    result.value=""
+}
+function result(){
+    var result = document.getElementById("result");
+    result.value = eval(result.value);
+}
+function del(){
+    var result = document.getElementById("result");
+    result.value = result.value.slice(0,-1); 
+}
+        </script>
+    </body>
+</html>
